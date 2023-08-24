@@ -9,8 +9,8 @@
 
 <body>
     <?php
-    require_once 'Cliente.php';
-    require_once 'DaoCliente.php';
+    require_once 'Cliente.html';
+    require_once 'DaoCliente.html';
 
     class ControleCliente
     {
@@ -86,10 +86,10 @@
             $stmt->store_result();
 
             if ($stmt->num_rows > 0) {
-                // Autorização bem-sucedida, redireciona para TelaCliente.php
+                // Autorização bem-sucedida, redireciona para TelaCliente.html
                 $stmt->close();
                 $conn->close();
-                header("Location: TelaCliente.php");
+                header("Location: TelaCliente.html");
                 exit(); // Certifique-se de encerrar o script após o redirecionamento
             } else {
                 // Autorização falhou
