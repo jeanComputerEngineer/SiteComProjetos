@@ -369,10 +369,10 @@
 	<!-- Menu oculto -->
 	<div class="hidden-menu" id="hiddenMenu">
 		<ul>
-			<li><a href="#">Blog</a></li>
-			<li><a href="#">Faq</a></li>
-			<li><a href="#">Sobre</a></li>
-			<li><a href="#">Outros Sites Desenvolvidos</a></li>
+			<li><a href="Blog.html">Blog</a></li>
+			<li><a href="Faq.html">Faq</a></li>
+			<li><a href="Sobre.html">Sobre</a></li>
+			<li><a href="OutrosSites.html">Outros Sites Desenvolvidos</a></li>
 		</ul>
 	</div>
 
@@ -380,27 +380,37 @@
 	<div class="tab-content active-tab" id="inicio">
 		<!-- Conteúdo da tela inicial -->
 		<h1>Bem-vindo à sua Área de Cliente</h1>
-		<p>Aqui você encontrará todas as ferramentas necessárias para gerenciar e acompanhar seus projetos de forma eficaz e conveniente.</p>
+		<p>Aqui você encontrará todas as ferramentas necessárias para gerenciar e acompanhar seus projetos de forma
+			eficaz e conveniente.</p>
 		<br><br>
 		<h2>Como Começar:</h2>
 		<ol>
-			<li><strong>Cadastre o seu Projeto:</strong> Clique na aba "Cadastrar Projeto" e preencha os detalhes do seu novo projeto. Isso nos ajudará a entender suas necessidades.</li>
-			<li><strong>Acompanhe o Progresso:</strong> Após cadastrar um projeto, você poderá acompanhar o status dele na seção "Meus Projetos".</li>
+			<li><strong>Cadastre o seu Projeto:</strong> Clique na aba "Cadastrar Projeto" e preencha os detalhes do seu
+				novo projeto. Isso nos ajudará a entender suas necessidades.</li>
+			<li><strong>Acompanhe o Progresso:</strong> Após cadastrar um projeto, você poderá acompanhar o status dele
+				na seção "Meus Projetos".</li>
 			<li><strong>Status do Projeto:</strong> Seu projeto passará pelas seguintes etapas:</li>
 		</ol>
 		<ul class="status-list">
 			<br>
 			<li><strong>Iniciado:</strong> Seu projeto foi enviado ao programador para análise.</li>
-			<li><strong>Em Revisão do Programador:</strong> O programador avaliará o escopo e criará protótipos das telas do projeto.</li>
-			<li><strong>Em Revisão do Cliente:</strong> Você terá a oportunidade de sugerir mudanças aos protótipos do programador. O projeto será aceito após sua revisão.</li>
-			<li><strong>Aguardando Pagamento:</strong> Agora, é só aguardar a confirmação de pagamento e assinar os termos e condições.</li>
-			<li><strong>Em Desenvolvimento:</strong> Com o pagamento confirmado, o desenvolvimento da versão final do projeto é iniciado.</li>
-			<li><strong>Revisão Final do Cliente:</strong> Uma reunião será agendada para analisar suas sugestões. O projeto será ajustado conforme suas preferências.</li>
-			<li><strong>Teste de Erros:</strong> O projeto passará por rigorosos testes de qualidade para eliminar qualquer bug.</li>
+			<li><strong>Em Revisão do Programador:</strong> O programador avaliará o escopo e criará protótipos das
+				telas do projeto.</li>
+			<li><strong>Em Revisão do Cliente:</strong> Você terá a oportunidade de sugerir mudanças aos protótipos do
+				programador. O projeto será aceito após sua revisão.</li>
+			<li><strong>Aguardando Pagamento:</strong> Agora, é só aguardar a confirmação de pagamento e assinar os
+				termos e condições.</li>
+			<li><strong>Em Desenvolvimento:</strong> Com o pagamento confirmado, o desenvolvimento da versão final do
+				projeto é iniciado.</li>
+			<li><strong>Revisão Final do Cliente:</strong> Uma reunião será agendada para analisar suas sugestões. O
+				projeto será ajustado conforme suas preferências.</li>
+			<li><strong>Teste de Erros:</strong> O projeto passará por rigorosos testes de qualidade para eliminar
+				qualquer bug.</li>
 			<li><strong>Projeto Finalizado:</strong> Seu projeto está pronto e entregue conforme o acordado.</li>
 		</ul>
 		<br>
-		<p>Ao final das etapas, sua satisfação é essencial. Compartilhe seu feedback para que possamos melhorar ainda mais a experiência do cliente.</p>
+		<p>Ao final das etapas, sua satisfação é essencial. Compartilhe seu feedback para que possamos melhorar ainda
+			mais a experiência do cliente.</p>
 		<p>Obrigado por confiar em nossos serviços! Estamos comprometidos em entregar resultados excepcionais.</p>
 	</div>
 
@@ -413,12 +423,17 @@
 			<ol>
 				<li>Preencha o campo "Título do Projeto" com um nome descritivo.</li>
 				<br>
-				<li>No campo "Descrição Detalhada do Projeto", forneça informações detalhadas sobre o projeto, como:</li>
+				<li>No campo "Descrição Detalhada do Projeto", forneça informações detalhadas sobre o projeto, como:
+				</li>
 				<ol type="a">
 					<li>Público alvo da aplicação.</li>
-					<li>Qual problema precisa ser solucionado pela aplicação, tanto para a empresa quanto para os clientes.</li>
-					<li>Descreva como você quer que a aplicação resolva o problema, pense no máximo de detalhes possíveis de funcionamento para o projeto desejado. Caso possua algum exemplar ou protótipos prontos, envie-os por gentileza.</li>
-					<li>Por fim, diga a diferença que você espera que a aplicação faça na sua vida, na dos clientes e na empresa. Este será o foco principal do projeto.</li>
+					<li>Qual problema precisa ser solucionado pela aplicação, tanto para a empresa quanto para os
+						clientes.</li>
+					<li>Descreva como você quer que a aplicação resolva o problema, pense no máximo de detalhes
+						possíveis de funcionamento para o projeto desejado. Caso possua algum exemplar ou protótipos
+						prontos, envie-os por gentileza.</li>
+					<li>Por fim, diga a diferença que você espera que a aplicação faça na sua vida, na dos clientes e na
+						empresa. Este será o foco principal do projeto.</li>
 				</ol>
 				<br>
 				<li>Clique no botão "Cadastrar" para enviar o projeto.</li>
@@ -473,7 +488,7 @@
 			var menu = document.getElementById('hiddenMenu');
 			menu.classList.toggle('active');
 		}
-		window.addEventListener("scroll", function() {
+		window.addEventListener("scroll", function () {
 			var headerContainer = document.querySelector(".header-container");
 			if (window.scrollY > 0) {
 				headerContainer.style.boxShadow = "0px 1px 5px rgba(0, 0, 0, 0.1)";
