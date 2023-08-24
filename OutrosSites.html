@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        /* Estilo global */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        h1 {
+            margin-top: 150px;
+        }
+
+
+        /* Abas superiores */
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            background-color: #f5f5f5;
+            padding: 15px 0;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #ccc;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .tab {
+            color: black;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .tab:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        .tab:hover {
+            background-color: #f0f0f0;
+            color: #007bff;
+        }
+
+        /* Imagem inicial */
+        .background-image {
+            background-image: url('Imagens/pexels-photo-1983032.webp');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 500px;
+            width: 100%;
+            margin: 0px;
+        }
+
+        /* Aba inferior */
+        .bottom-tab {
+            justify-content: center;
+            background-color: #eaeaea;
+            padding: 15px 0;
+            width: 100%;
+            box-shadow: 15px 5px 5px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #ddd;
+            text-align: center;
+            margin-top: 100px;
+            padding-top: 20px;
+        }
+
+        /* Estilos adicionais para o conteúdo do blog */
+        .content {
+            max-width: 1000px;
+            margin-top: 50px;
+            padding: 150px;
+            background-color: #f0f4f8;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            line-height: 1.6;
+            padding-left: 50px;
+            padding-top: 100px;
+        }
+
+        .content h3 {
+            margin-top: -10px;
+            color: #231b87;
+            ;
+        }
+
+        .content p {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .content a {
+            color: #2e23b1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .content a:hover {
+            color: #3193ff;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="background-section background-image"></div>
+    <div class="tabs-container">
+        <a href="index.html" class="tab">Faça seu Cadastro de Usuário</a>
+        <a href="Login.html" class="tab">Já Possuo Cadastro</a>
+        <a href="Blog.html" class="tab">Blog</a>
+        <a href="Faq.html" class="tab">FAQ</a>
+        <a href="Sobre.html" class="tab">Sobre</a>
+        <a href="OutrosSites.html" class="tab">Outros Sites Desenvolvidos</a>
+        <a href="TelaCliente.html" class="tab">Tela do Cliente</a>
+    </div>
+
+    <h1>Seja bem-vindo à minha lista de outros sites!</h1>
+    <h2>Nesta página, abordarei sobre assuntos aleatórios, que gostei de fazer em outros sites.</h2>
+
+    <div class="content">
+
+        <h3><a href="Post1.php">Título do Primeiro Site</a></h3>
+        <p>Este é o conteúdo do primeiro site. Preenchimento, Preenchimento, Preenchimento, Preenchimento,
+            Preenchimento, </p>
+
+        <br><br>
+
+        <h3><a href="Post2.php">Título do Segundo Site</a></h3>
+        <p>Este é o conteúdo do segundo site</p>
+
+        <br><br>
+
+        <h3><a href="Post3.php">Título do Terceiro Site</a></h3>
+        <p>Este é o conteúdo do terceiro site</p>
+    </div>
+
+    <div class="bottom-tab">
+        Jean Samuel Candido Henrique <br>
+        Acadêmico de Engenharia de Computação na UEPG
+    </div>
+
+    <!-- Seu conteúdo do script JavaScript -->
+    <script>
+        // ...
+    </script>
+
+</body>
+
+</html>
