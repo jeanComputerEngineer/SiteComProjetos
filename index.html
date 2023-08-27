@@ -33,6 +33,13 @@
       align-items: center;
     }
 
+    @media screen and (min-width: 768px) {
+
+      .hidden-menu {
+        display: none;
+      }
+    }
+
     /* Abas superiores */
     .tabs-container {
       display: flex;
@@ -81,6 +88,7 @@
       margin-top: 100px;
       padding-top: 20px;
     }
+
 
     /* Container principal */
     .container {
@@ -194,21 +202,99 @@
       list-style: disc;
     }
 
+
+
+    .tab:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    .cadastro-container,
+    .marketing-container {
+      margin: 10px 0;
+    }
+
+
+
     /* Ajuste para resoluções menores */
     @media screen and (max-width: 768px) {
       .tabs-container {
-        flex-direction: column;
-        align-items: center;
+        display: none;
       }
 
-      .tab:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 10px;
+      /* Estilos para o ícone de menu */
+      .menu-icon {
+        position: fixed;
+        top: 5px;
+        right: 20px;
+        font-size: 29px;
+        cursor: pointer;
+        z-index: 1000;
+        background-color: #dbdbdb;
+        color: black;
+        border-radius: 10px;
+        /* Defina a posição inicial */
+        transition: right 0.3s;
+        /* Adicione a transição */
       }
 
-      .cadastro-container,
-      .marketing-container {
-        margin: 10px 0;
+      .hidden-menu {
+        position: fixed;
+        top: 0px;
+        right: -250px;
+        /* Inicialmente oculto */
+        width: 250px;
+        height: 100%;
+        background-color: #ffffff;
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        /* Sombra no menu */
+      }
+
+      .hidden-menu.active {
+        right: 0;
+        /* Mostra o menu quando estiver ativo */
+      }
+
+      .hidden-menu ul {
+        list-style: none;
+        padding: 20px;
+        margin: 0;
+      }
+
+      .hidden-menu li {
+        margin-bottom: 1px;
+        border-bottom: 1px solid #555;
+        /* Divisória entre as opções */
+      }
+
+      .hidden-menu a {
+        color: #000000;
+        /* Cor das letras */
+        text-decoration: none;
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+        /* Altera a fonte */
+        padding: 1px 0px;
+        display: block;
+        transition: background-color 0.3s;
+        margin-top: 50px;
+      }
+
+      .hidden-menu a:hover {
+        background-color: #dae8f6;
+        color: rgb(0, 0, 0);
+        /* Cor de fundo ao passar o mouse */
+      }
+
+
+      .tab-content {
+        display: none;
+      }
+
+      .active-tab {
+        display: block;
       }
     }
   </style>
@@ -231,6 +317,9 @@
   }
   ?>
 
+
+
+  <!-- menu visivel -->
   <div class="tabs-container">
     <a href="index.html" class="tab">Faça seu Cadastro de Usuário</a>
     <a href="Login.html" class="tab">Já Possuo Cadastro</a>
@@ -240,6 +329,26 @@
     <a href="OutrosSites.html" class="tab">Outros Sites Desenvolvidos</a>
     <a href="TelaCliente.html" class="tab">Tela do Cliente</a>
   </div>
+
+  <div class="menu-icon" onclick="toggleMenu()">
+    &#9776;
+  </div>
+
+  <!-- Menu invisivel -->
+  <div class="hidden-menu" id="hiddenMenu">
+    <ul>
+      <a href="index.html" class="tab">Faça seu Cadastro de Usuário</a>
+      <a href="Login.html" class="tab">Já Possuo Cadastro</a>
+      <a href="Blog.html" class="tab">Blog</a>
+      <a href="Faq.html" class="tab">FAQ</a>
+      <a href="Sobre.html" class="tab">Sobre</a>
+      <a href="OutrosSites.html" class="tab">Outros Sites Desenvolvidos</a>
+      <a href="TelaCliente.html" class="tab">Tela do Cliente</a>
+    </ul>
+  </div>
+
+
+
 
   <div class="background-section background-image"></div>
 
@@ -292,27 +401,25 @@
 
 <script>
   alert('Site sem implementação de banco de dados no momento!');
-  // Função para alternar entre as abas
-  function showTab(tabId) {
-    var tabs = document.getElementsByClassName('tab-content');
-    for (var i = 0; i < tabs.length; i++) {
-      tabs[i].classList.remove('active-tab');
-    }
-    document.getElementById(tabId).classList.add('active-tab');
-
-    // Ocultar ou mostrar a imagem de fundo com base na tab selecionada
-    var backgroundSection = document.querySelector('.background-section');
-    if (tabId === 'inicio') {
-      backgroundSection.style.display = 'block'; // Mostrar a imagem de fundo
-    } else {
-      backgroundSection.style.display = 'none'; // Ocultar a imagem de fundo
-    }
+  // Ocultar ou mostrar a imagem de fundo com base na tab selecionada
+  var backgroundSection = document.querySelector('.background-section');
+  if (tabId === 'inicio') {
+    backgroundSection.style.display = 'block'; // Mostrar a imagem de fundo
+  } else {
+    backgroundSection.style.display = 'none'; // Ocultar a imagem de fundo
   }
+
+
+
   // Função para mostrar/ocultar o menu
   function toggleMenu() {
+    console.log("Toggle menu function called");
     var menu = document.getElementById('hiddenMenu');
     menu.classList.toggle('active');
   }
+
+
+
   window.addEventListener("scroll", function () {
     var headerContainer = document.querySelector(".header-container");
     if (window.scrollY > 0) {
@@ -321,6 +428,8 @@
       headerContainer.style.boxShadow = "none";
     }
   });
+
 </script>
+</body>
 
 </html>
